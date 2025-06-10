@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create or Update Student</title>
+</head>
+<body>
+    <h2>{{ form.instance.pk|yesno:"Update Student,Create Student" }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="/">Back to List</a>
+</body>
+</html>
